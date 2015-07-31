@@ -1,5 +1,4 @@
 import Ember from 'ember';
-import Modelpage from 'client/models/modelpage';
 
 export default Ember.Route.extend({
   model: function() {

@@ -1,7 +1,9 @@
-# Client
+# Tektroniks Metacatalog Client [![Build Status](https://travis-ci.org/claudiocro/tektronix-metacatalog-client.svg)](https://travis-ci.org/claudiocro/tektronix-metacatalog-client)
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+Tektronix Metacatalog Client
+
+For more infos checkout out: https://github.com/claudiocro/tektronix-metacatalog-sane
+
 
 ## Prerequisites
 
@@ -24,10 +26,6 @@ You will need the following things properly installed on your computer.
 
 * `ember server`
 * Visit your app at [http://localhost:4200](http://localhost:4200).
-
-### Code Generators
-
-Make use of the many generators for code, try `ember help generate` for more details
 
 ### Running Tests
 

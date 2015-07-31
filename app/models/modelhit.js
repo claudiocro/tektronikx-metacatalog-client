@@ -25,10 +25,11 @@ export default DS.Model.extend({
       var modelpage = this.get('modelpages');
       var hit;
 
+      var findHit = function(item) {
+        return item.get('page') === self.get('page') && i ===item.get('catalog.year');
+      };
       for(var i=this.get('start'); i<=this.get('last'); i++){
-        hit = modelpage.find(function(item) {
-          return item.get('page') === self.get('page') && i ===item.get('catalog.year');
-        });
+        hit = modelpage.find(findHit);
         if(!hit) {
           range.push(i);
         }
