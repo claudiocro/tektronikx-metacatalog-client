@@ -1,0 +1,26 @@
+{{#each grid in availableGridCatalogs}}
+  <div class="row">
+    {{#each model in grid}}
+      <div class="col s12 m12 l6">
+        <div {{bind-attr class=":card model.processed:disabled"}}>
+          <div class="card-image">
+            {{light-box href=model.pageUrl
+              data-lightbox="lightbox-pages"
+              data-title=model.year
+              classNames="thumbnail"}}
+          </div>
+          <div class="card-content">
+            <span class="card-title grey-text text-darken-4">
+            {{#if model.processed}}
+              {{model.catalog.year}}
+            {{else}}
+              <a href="#" {{action 'addSugestionAsPage' model}}><i class="mdi-social-whatshot">Add</i></a> {{model.catalog.year}}
+            {{/if}}
+            </span>
+            <p><a href="#">Download</a></p>
+          </div>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+{{/each}}

@@ -1,0 +1,32 @@
+@import 'materialize';
+@import 'ember-cli-materialize';
+
+@import 'jrhand';
+@import 'search-hint';
+
+
+.readonly form .row {
+  margin-bottom: 0;
+}
+
+.readonly form .row .input-field small{
+  display: none;
+}
+
+.collapsible-body p {
+  display:block;
+}
+
+nav .input-field-search {
+  position: absolute;
+  width:100%;
+}
+
+.page-header a {
+  color: #000000;
+}
+
+.card.disabled {
+  pointer-events: none;
+  opacity: 0.3;
+}

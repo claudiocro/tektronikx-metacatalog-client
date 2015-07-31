@@ -1,0 +1,28 @@
+<section>
+  <div class="container">
+    <div>
+      <div class="page-header">
+        <h2>Edit Model</h2>
+      </div>
+    </div>
+    <div class="row">
+      <form name="catalogForm" class="col s12" role="form">
+        <div class="row">
+          {{md-input value=model.year label="Year" classNames="col s12"}}
+        </div>
+        <div class="row">
+          {{md-input value=model.name label="Name" classNames="col s12"}}
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <button {{action 'save'}} class="btn">Save</button>
+          </div>
+        </div>
+
+        <div class="text-center text-danger">
+          <strong>{{serverErrorMessage}}</strong>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,37 @@
+<form name="modelhitForm" class="col s12" role="form">
+  {{#unless readonly}}
+    <div class="row">
+      {{md-input value=model.model label="Model" classNames="col s12" readonly=readonly}}
+    </div>
+
+    <div class="row">
+      {{md-input value=model.name label="Name" classNames="col s12" readonly=readonly}}
+    </div>
+  {{/unless}}
+  <div class="row">
+    {{md-input value=model.foundIn label="Found in" classNames="col s4" readonly=readonly}}
+    {{md-input value=model.start label="Start" classNames="col s4" readonly=readonly}}
+    {{md-input value=model.last label="Last" classNames="col s4" readonly=readonly}}
+  </div>
+
+  <div class="row">
+    {{md-input value=model.page label="Seite" classNames="col s4" readonly=readonly}}
+    {{md-input value=model.page1 label="Seite 1" classNames="col s4" readonly=readonly}}
+  </div>
+
+  <div class="row">
+    {{md-input value=model.tag label="Tag"  classNames="col s4" readonly=readonly}}
+  </div>
+  {{#unless readonly}}
+  <div class="row">
+    <div class="input-field col s12">
+      <button {{action 'save'}} class="btn">Save</button>
+    </div>
+  </div>
+
+  <div class="text-center text-danger">
+    <strong>{{serverErrorMessage}}</strong>
+  </div>
+
+  {{/unless}}
+</form>

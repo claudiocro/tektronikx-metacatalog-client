@@ -1,0 +1,19 @@
+<section>
+  <div class="container">
+    <div class="page-header">
+    <h2>Catalogs</h2>
+    </div>
+    <div>
+      <table class="table">
+        <tbody>
+          {{#each catalog in model}}
+            <tr>
+              <td>{{#link-to 'catalog.index' catalog.id}}{{catalog.name}}{{/link-to}}</td>
+              <td>{{#link-to 'catalog.index' catalog.id}}{{catalog.year}}{{/link-to}}</td>
+            </tr>
+          {{/each}}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>

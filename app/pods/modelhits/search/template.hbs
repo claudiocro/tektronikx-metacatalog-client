@@ -1,0 +1,18 @@
+<section>
+  <div class="container">
+    <div class="page-header">
+      <h2>Found Models</h2>
+    </div>
+    <div>
+      <table class="bordered">
+        <tbody>
+          {{#each modelhit in model}}
+            <tr>
+              <td>{{#link-to 'modelhit' modelhit}}{{modelhit.model}}{{/link-to}}</td>
+            </tr>
+          {{/each}}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
