@@ -47,5 +47,11 @@
     "express": "^4.13.1",
     "glob": "^4.5.3",
     "morgan": "^1.6.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/claudiocro/tektronix-metacatalog-client.git"
+  },
+  "author": "claudiocro",
+  "license": "MIT"
 }
