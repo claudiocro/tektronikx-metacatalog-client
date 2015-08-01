@@ -37,7 +37,6 @@ test('visiting / and search', function(assert) {
   });
 });
 
-
 test('visiting /modelhits/search/a', function(assert) {
   TestHelper.handleFindAll('catalog', 10);
   var modelhits = makeList('modelhit',2);
