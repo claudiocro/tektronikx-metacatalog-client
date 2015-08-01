@@ -1,7 +1,7 @@
 <nav class="orange lighten-2 flat">
   <div class="nav-wrapper container">
     <div class="input-field input-field-search">
-      {{input value=searchValue action='doSearch' focus-in='focusIn' focus-out='focusOut'}}
+      {{input value=searchValue action='doSearch' on="key-press" focus-in='focusIn' focus-out='focusOut'}}
       <label for="search"><i class="mdi-action-search"></i></label>
       {{#if showHint}}
         <div class="search-hint">

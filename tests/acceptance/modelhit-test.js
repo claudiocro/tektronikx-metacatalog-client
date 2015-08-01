@@ -2,7 +2,7 @@ import Ember from 'ember';
 import { module, test } from 'qunit';
 import { make, makeList } from 'ember-data-factory-guy';
 import TestHelper from 'ember-data-factory-guy/factory-guy-test-helper';
-import startApp from 'client/tests/helpers/start-app';
+import startApp from 'tektronix-metacatalog-client/tests/helpers/start-app';
 
 
 var application;
@@ -21,12 +21,12 @@ module('Acceptance | modelhit-index', {
 
 test('visiting /modelhit/2', function(assert) {
   TestHelper.handleFindAll('catalog', 10);
-  var modelhit = make('modelhit');
+  var modelhit = make('modelhit', 'with_modelpages');
   authenticateSession();
 
   visit('/modelhit/' + modelhit.id);
 
   andThen(function() {
-    assert.equal(find('.thumbnail').length, 4);
+    assert.equal(find('.thumbnail').length, 2);
   });
 });

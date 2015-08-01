@@ -2,8 +2,8 @@
 
 module.exports = function(environment) {
   var ENV = {
-    modulePrefix: 'client',
-    podModulePrefix: 'client/pods',
+    modulePrefix: 'tektronix-metacatalog-client',
+    podModulePrefix: 'tektronix-metacatalog-client/pods',
     environment: environment,
     baseURL: '/',
     locationType: 'auto',

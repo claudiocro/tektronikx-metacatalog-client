@@ -1,13 +1,9 @@
-import {
-  moduleForModel,
-  test
-} from 'ember-qunit';
-
+import { moduleForModel, test} from 'ember-qunit';
 import Ember from 'ember';
 
 moduleForModel('modelhit', {
   // Specify the other units that are required for this test.
-  needs: []
+  needs: ['model:modelpage']
 });
 
 test('it exists', function(assert) {
