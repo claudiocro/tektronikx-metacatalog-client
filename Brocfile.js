@@ -4,7 +4,7 @@ var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 var app = new EmberApp({
   fingerprint: {
-    prepend: 'https://s3-eu-west-1.amazonaws.com/'
+    prepend: 'https://s3-eu-west-1.amazonaws.com/tektronix-metacatalog/webapp/'
   }
 });
 

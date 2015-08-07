@@ -1,6 +1,6 @@
 {
   "name": "tektronix-metacatalog-client",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Small description for client goes here",
   "private": true,
   "directories": {
