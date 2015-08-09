@@ -2,7 +2,11 @@
 
 var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
-var app = new EmberApp();
+var app = new EmberApp({
+  fingerprint: {
+    prepend: 'https://s3-eu-west-1.amazonaws.com/tektronix-metacatalog/webapp/'
+  }
+});
 
 // Use `app.import` to add additional libraries to the generated
 // output files.
