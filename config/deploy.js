@@ -3,7 +3,7 @@ module.exports = {
     store: {
       host: 'catfish.redistogo.com',
       port: 9896,
-      password: process.env['REDIS_PWD']
+      password: process.env['REDIS_PW']
     },
     assets: {
       accessKeyId: 'AKIAJ25XK75XSVWI7UPQ',

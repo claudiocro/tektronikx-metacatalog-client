@@ -1,41 +1,31 @@
----
 language: node_js
 node_js:
-  - "0.12"
-
+- '0.12'
 sudo: false
-
 cache:
   directories:
-    - node_modules
-
+  - node_modules
 notifications:
   email: false
-
 before_install:
-  - "npm config set spin false"
-  - "npm install -g npm@^2"
-
-before_install:
-  - mkdir travis-phantomjs
-  - wget https://s3.amazonaws.com/travis-phantomjs/phantomjs-2.0.0-ubuntu-12.04.tar.bz2 -O $PWD/travis-phantomjs/phantomjs-2.0.0-ubuntu-12.04.tar.bz2
-  - tar -xvf $PWD/travis-phantomjs/phantomjs-2.0.0-ubuntu-12.04.tar.bz2 -C $PWD/travis-phantomjs
-  - export PATH=$PWD/travis-phantomjs:$PATH
-
+- mkdir travis-phantomjs
+- wget https://s3.amazonaws.com/travis-phantomjs/phantomjs-2.0.0-ubuntu-12.04.tar.bz2
+  -O $PWD/travis-phantomjs/phantomjs-2.0.0-ubuntu-12.04.tar.bz2
+- tar -xvf $PWD/travis-phantomjs/phantomjs-2.0.0-ubuntu-12.04.tar.bz2 -C $PWD/travis-phantomjs
+- export PATH=$PWD/travis-phantomjs:$PATH
 install:
-  - npm install -g bower
-  - npm install
-  - bower install
-
+- npm install -g bower
+- npm install
+- bower install
 script:
-  - npm test
-
-before_deploy:
-  - grunt before-deploy
-after_deploy:
-  - grunt after-deploy
+- npm test
 deploy:
   provider: script
-  script: scripts/deploy.sh
+  script: export EMBER_DEPLOY_REVISION=tektronix-metacatalog-client:`echo $TRAVIS_COMMIT | cut -c1-7` && npm run deploy -- -environment=production && npm run activate -- -environment=production
   on:
     branch: master
+  skip_cleanup: true
+env:
+  global:
+  - secure: FYrj/LMr6mYSbAS94t5jVz1iRVdjgSBrMAJKdZ+C8b9zPaHb4M1pQLpz7gter+VFiVwrNBY8o0AKK2W1LmVFL/iqgPaCD4bYBZYP0+B1CmUTTKbUnms5AiCn8rVpHihK3W9ohULQwNywzcpHHw5ODTzt6lI6Gbx4ezNXa/vtPlTUnHzmu7ogun6HheGv1TKJKDRFtPx5r/hDrN2p0vpi/P5KyvMPniQ6gg8qCWsFRJIjRkJ4zia+9VdGN9oyhXnT3bD9B0RVgGzKbhYTyM2MtOmxXX/lWjCOHRMQxNlduN7QxtRQsnh5+W8aMKms1G1181rGyUfg+/B82carZFZ+w5QpVbEvq3Ha+xYZ2R96Dvv0d6cA+wYjElbWrfhhBkFooAlyGspvzOd0wmWlwLOrkdVpk6QQ7uy4tvl2zuS1W6+6BqO318+HBw4qPYowozwYUKC8G4JJEUmhkR9XQiuibj2p6/D4066TQ83/VgLNP01jDqklaAX9RZYUvvhyZKptztEXk1LNLex1V8PNtDWrBCs6uqIjz+T7CF5CaLyrRb437V+0Ssb3xhWSyEtyLEuPhXnG33DIM5b+sJAc2HOr/jsWlFEqelVGiNVQY6pcikM27kZckN0UDYjlphg63cC88ZS9H8rpYhBxj3mtJFYzvojN3o9HSq5da77fhGrqsy4=
+  - secure: VxECOll/4Z7yIJRI4t6s3Cr9VgVNHkw21rYL4WQeEHUwyQwhnyeCG03bwqYCpAl7np8cbcVYWhy6gLwLiVy0aUK9ZCslYqUtRGpiDy3slPQhIrxNayy4oA51ZYg0IfXzpRaK6qS+QCjdHXsbcRfbmpYWJD8XCg7HcnXEsv4aFP6bGFC1FepKfP6SgmbnOjEc90xw2FfVZ9Uq+1LLM6jlt6xkLLutmhTSi4VRveRl/453xwVj5muGLLtzHblDG6RMlyIwPA7UnWedIiRcFgzalp5arDzUv92Rq7TeZuzZXAwtBSeymIEYBpi2walFGIg4W64x0kUhyTLLCMGFFMdVTOPAZNsnZi3QmDDikm6+nXl25GCD8ta3fgrhKx1qFDc0VdwbWqYxPLAUZYuo/c3UaaOVgQGehG+n0zy4TfdHQqdJsYKPOm3ZhTEArKE2X3nsY3hEREfe6H9kC43nnvOuKh1SGdYzrS00u0dcHDDLPiufJIlXb09yXusP+eWrLkFc3P1F0bf8NKw2l1bpXQf04PXuN8onrHFW7m0r7yTf7vSLux0A+mKD3CQZd8d6vnUDfEoYPhcI28+qI7OF38+mykXdHnwrgUqqBQsbR/90ZMMa9EoWku0AEIhrvKq/0t7NJkUd/B/XlBck3u4ZFAO4pgxIPuo7groSspP4B/z0d8Q=

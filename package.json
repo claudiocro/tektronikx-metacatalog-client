@@ -8,7 +8,9 @@
   "scripts": {
     "start": "ember server",
     "build": "ember build",
-    "test": "ember test"
+    "test": "ember test",
+    "deploy": "ember deploy",
+    "activate": "ember deploy:activate --revision $EMBER_DEPLOY_REVISION"
   },
   "repository": {
     "type": "git",
