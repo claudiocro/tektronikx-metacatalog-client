@@ -9,6 +9,9 @@ cache:
   directories:
     - node_modules
 
+notifications:
+  email: false
+
 before_install:
   - "npm config set spin false"
   - "npm install -g npm@^2"
@@ -26,3 +29,12 @@ install:
 
 script:
   - npm test
+
+before_deploy:
+  - grunt before-deploy
+after_deploy:
+  - grunt after-deploy
+
+env:
+  global:
+    secure: CZYys72zjk8mYaJieYVLjnBW052D9+c5cTRFgSJPF/2Ghzna9h/yYvsEGPkQ27pFbF6XLfhTFdZMjNa7Uwx5D5jhFxxCUyKY8ceGOpJ8tzgIvvSCIqwfCmbbDvOpN5iOSXNVYt6CZduO3qcxNQkCTR1gRes9MgiymGzAVv7k8+vgDFtqjCUqDBeHSAlbjZFSPunLJlEFheyy/3iBGFugBfPhKpdDCqEWmi7AQtR4P0wfwGOau0+SfBsmCxFTdYq5OyDftejT/uxO6AYbfUoYpKSnnNCV4oh88b5QwLHA7FuQzbdv120D+M0/WkkAbDjmzxT/qbEsq9Uz0ICD5gOk7ECjRARkawVLk3Bpcpp6Z14nA+BhY0bJHdVo/0Ok7gW3QyEgLOeHlYuCOqagRcjcAoUGxCWfxZxbe6artvZhc9Li0OYU1Kc4gsSi5X4bxuggKRzj4Zg1zs1eEE1i+TOuzVZwa25K3Ac8FPP05kBGQ2Ec+ALf/o9wAkJZk6QbKlOOAETNfFdnVFirA0tL10aN6VryRSZpb2hs6M3N278hO1fFbxJd/9Lsnd0OKigQnAEqumt++FyGS8xCUjvT2DOuJdiphFUBZNcpX1TNshQ/OzlYDJqFDHYFZPYs/G86XNxvfPrfqVXbxrCF6/F4iT75J5NT4E7tZp2ptntE+CqI6Cw=
