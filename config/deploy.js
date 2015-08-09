@@ -1,13 +1,13 @@
 module.exports = {
    production: {
     store: {
-      host: 'carp.redistogo.com',
-      port: 9678,
-      password: 'b7b9cb8f19b95f77fa16ebcda96b7056'
+      host: 'catfish.redistogo.com',
+      port: 9896,
+      password: process.env['REDIS_PWD']
     },
     assets: {
-      accessKeyId: 'AKIAJ4COS23HRJNFEECA',
-      secretAccessKey: '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',
+      accessKeyId: 'AKIAJ25XK75XSVWI7UPQ',
+      secretAccessKey: process.env['AWS_ACCESS_KEY'],
       bucket: 'tektronix-metacatalog',
       prefix: 'webapp'
     }
