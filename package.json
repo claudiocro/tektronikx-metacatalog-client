@@ -1,7 +1,7 @@
 {
   "name": "tektronix-metacatalog-client",
   "description": "Tektronix Metacatalog Ember Client",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "directories": {
     "test": "tests"
   },
