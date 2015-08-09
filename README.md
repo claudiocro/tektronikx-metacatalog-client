@@ -1,4 +1,4 @@
-# Tektroniks Metacatalog Client [![Build Status](https://travis-ci.org/claudiocro/tektronix-metacatalog-client.svg)](https://travis-ci.org/claudiocro/tektronix-metacatalog-client)
+# Tektroniks Metacatalog Client [![Build Status](https://travis-ci.org/claudiocro/tektronix-metacatalog-client.svg?branch=develop)](https://travis-ci.org/claudiocro/tektronix-metacatalog-client)
 
 Tektronix Metacatalog Client
 
@@ -39,7 +39,7 @@ You will need the following things properly installed on your computer.
 
 ### Deploying
 
-Specify what it takes to deploy your app.
+* `ember deploy:activate --revision tektronix-metacatalog-client:<revision> --environment=production`
 
 ## Further Reading / Useful Links
 
