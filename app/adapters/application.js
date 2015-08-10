@@ -17,5 +17,4 @@ else {
   });
 }
 
-
 export default ApplicationAdapter;
