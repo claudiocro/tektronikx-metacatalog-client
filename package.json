@@ -55,7 +55,8 @@
     "express": "^4.13.1",
     "glob": "^4.5.3",
     "morgan": "^1.6.1",
-    "semantic-release": "^4.0.2"
+    "semantic-release": "^4.0.2",
+    "ember-deploy-package-tagging":"https://github.com/plyfe/ember-deploy-package-tagging.git#9bb65bc"
   },
   "bugs": {
     "url": "https://github.com/claudiocro/tektronix-metacatalog-client/issues"
