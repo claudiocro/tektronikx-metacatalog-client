@@ -18,7 +18,12 @@ module.exports = function (grunt) {
         npm: false,
         // Workaround to not actually update the changelog but git stage it
         changelog: true,
-        changelogText: ''
+        changelogText: '',
+
+        github: {
+          repo: 'claudiocro/tektronix-metacatalog-client', //put your user/repo here
+          accessTokenVar: 'GH_TOKEN'
+        }
       }
     }
   });

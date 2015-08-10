@@ -21,11 +21,14 @@ install:
 script:
 - npm test
 before_deploy:
-- export EMBER_DEPLOY_REVISION=tektronix-metacatalog-client:`echo $TRAVIS_COMMIT | cut -c1-7`
+  - git config --global user.name "Claudio Romano (CI)"
+  - git config --global user.email claudiocro@gmail.com
+  - git remote set-url origin https://github.com/claudiocro/tektronix-metacatalog-client.git
+  - git config credential.helper "store --file=.git/credentials"
+  - echo "https://$GH_TOKEN:@github.com" > .git/credentials
 deploy:
   provider: script
-  script: npm run release && npm run deploy -- -environment=production && npm run
-    activate -- -environment=production
+  script: export EMBER_DEPLOY_REVISION=tektronix-metacatalog-client:`echo $TRAVIS_COMMIT | cut -c1-7` && npm run release && npm run deploy -- -environment=production && npm run activate -- -environment=production
   on:
     branch: master
   skip_cleanup: true
