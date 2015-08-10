@@ -1,7 +1,7 @@
 {
   "name": "tektronix-metacatalog-client",
   "description": "Tektronix Metacatalog Ember Client",
-  "version": "0.0.2",
+  "version": "0.2.0",
   "directories": {
     "test": "tests"
   },
@@ -58,7 +58,7 @@
     "glob": "^4.5.3",
     "grunt": "^0.4.5",
     "grunt-conventional-changelog": "^1.2.2",
-    "grunt-release": "^0.13.0",
+    "grunt-release": "git://github.com/claudiocro/grunt-release.git#master",
     "load-grunt-tasks": "^3.2.0",
     "morgan": "^1.6.1"
   },

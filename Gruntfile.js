@@ -16,9 +16,15 @@ module.exports = function (grunt) {
         additionalFiles: ['bower.json'],
         beforeRelease: ['changelog'],
         npm: false,
+        remote: 'origin/master',
         // Workaround to not actually update the changelog but git stage it
         changelog: true,
-        changelogText: ''
+        changelogText: '',
+
+        github: {
+          repo: 'claudiocro/tektronix-metacatalog-client', //put your user/repo here
+          accessTokenVar: 'GH_TOKEN'
+        }
       }
     }
   });
