@@ -15,14 +15,13 @@ before_install:
 - export PATH=$PWD/travis-phantomjs:$PATH
 install:
 - npm install -g bower
-- npm install -g grunt@0.4.5
+- npm install -g grunt-cli
 - npm install
 - bower install
 script:
 - npm test
 before_deploy:
-- export EMBER_DEPLOY_REVISION=tektronix-metacatalog-client:`echo $TRAVIS_COMMIT |
-  cut -c1-7`
+- export EMBER_DEPLOY_REVISION=tektronix-metacatalog-client:`echo $TRAVIS_COMMIT | cut -c1-7`
 deploy:
   provider: script
   script: npm run release && npm run deploy -- -environment=production && npm run
