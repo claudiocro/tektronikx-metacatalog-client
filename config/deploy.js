@@ -10,6 +10,7 @@ module.exports = {
       secretAccessKey: process.env['AWS_ACCESS_KEY'],
       bucket: 'tektronix-metacatalog',
       prefix: 'webapp'
-    }
+    },
+    tagging: 'package'
   }
 };
