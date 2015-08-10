@@ -17,7 +17,7 @@
     "url": "https://github.com/claudiocro/tektronix-metacatalog-client.git"
   },
   "engines": {
-    "node": ">= 0.10.0"
+    "node": ">= 0.12.0"
   },
   "author": "claudiocro@gmail.com",
   "homepage": "https://github.com/claudiocro/tektronix-metacatalog-client#readme",
