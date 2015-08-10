@@ -68,8 +68,5 @@
   },
   "bugs": {
     "url": "https://github.com/claudiocro/tektronix-metacatalog-client/issues"
-  },
-  "release": {
-    "branch": "chores/semantic"
   }
 }
