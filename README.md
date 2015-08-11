@@ -24,7 +24,8 @@ You will need the following things properly installed on your computer.
 
 ## Running / Development
 
-* `ember server`
+Make shure your local server is running
+* `ember serve --proxy http://127.0.0.1:1337`
 * Visit your app at [http://localhost:4200](http://localhost:4200).
 
 ### Running Tests
