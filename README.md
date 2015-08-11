@@ -17,7 +17,7 @@ You will need the following things properly installed on your computer.
 
 ## Installation
 
-* `git clone <repository-url>` this repository
+* `git clone https://github.com/claudiocro/tektronix-metacatalog-client.git` this repository
 * change into the new directory
 * `npm install`
 * `bower install`
@@ -39,13 +39,15 @@ You will need the following things properly installed on your computer.
 
 ### Deploying
 
-* `ember deploy:activate --revision tektronix-metacatalog-client:<revision> --environment=production`
+* `ember deploy:activate --revision tektronix-metacatalog-client:<revision> --environment=production` (production)
+
+### Release
+
+This app follows the `semantc-release`
+* `commit` to master branch
 
 ## Further Reading / Useful Links
 
 * [ember.js](http://emberjs.com/)
 * [ember-cli](http://www.ember-cli.com/)
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
-
+* [semantic-release](https://github.com/semantic-release/semantic-release/)
