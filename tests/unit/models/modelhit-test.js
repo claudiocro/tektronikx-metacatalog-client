@@ -4,6 +4,7 @@ import Ember from 'ember';
 moduleForModel('modelhit', {
   // Specify the other units that are required for this test.
   needs: ['model:modelpage']
+  //needs: ['model:modelpage', 'store:main']
 });
 
 test('it exists', function(assert) {
@@ -12,7 +13,7 @@ test('it exists', function(assert) {
   assert.ok(!!model);
 });
 
-test('foundInYearsRange', function(assert) {
+test('foundInYearsRange | start and last', function(assert) {
   var model = this.subject();
 
   assert.equal(0, model.get('foundInYearsRange'));
@@ -37,3 +38,20 @@ test('foundInYearsRange', function(assert) {
 
   });
 });
+
+/*
+test('foundInYearsRange | catalog', function(assert) {
+  var model = this.subject();
+
+  assert.equal(0, model.get('foundInYearsRange'));
+
+  Ember.run(function(){
+
+    model.set('start', 20);
+    model.set('last', 22);
+    model.set('catalog', this.store.createRecord('catalog', {year: 21}));
+    assert.deepEqual(model.get('foundInYearsRange'), [20,22]);
+
+  });
+});
+*/

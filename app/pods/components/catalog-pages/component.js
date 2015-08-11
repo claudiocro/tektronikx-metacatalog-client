@@ -5,7 +5,7 @@ var Model = Ember.Object.extend({
   authKey:'',
   catalog: undefined,
   modelhit: undefined,
-  processed: false,
+  processed: false, //todo: this has no effect at the moment
 
   pageUrl: function(){
     return '/pages/'+this.get('catalog.storageid')+'/'+this.get('modelhit.page')+'.png?authKey='+this.get('authKey');
