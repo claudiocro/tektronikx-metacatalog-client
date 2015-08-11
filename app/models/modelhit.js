@@ -37,5 +37,5 @@ export default DS.Model.extend({
 
       return range;
     }
-  }.property('start','last', 'modelpages')
+  }.property('start','last', 'page', 'modelpages')
 });
