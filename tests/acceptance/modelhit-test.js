@@ -27,6 +27,6 @@ test('visiting /modelhit/2', function(assert) {
   visit('/modelhit/' + modelhit.id);
 
   andThen(function() {
-    assert.equal(find('.thumbnail').length, 2);
+    assert.equal(find('.card').length, 2);
   });
 });
