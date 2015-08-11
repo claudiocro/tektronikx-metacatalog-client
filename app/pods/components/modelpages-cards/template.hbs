@@ -4,16 +4,13 @@
       <div class="col s12 m12 l6">
         <div class="card">
           <div class="card-image">
-            {{light-box href=model.pageUrl
-              data-lightbox="lightbox-pages"
-              data-title=model.year
-              classNames="thumbnail"}}
+            <img src="{{model.pageUrl}}" title="{{model.year}}"/>
           </div>
           <div class="card-content">
             <span class="card-title grey-text text-darken-4">
-              {{model.catalog.year}}
+              {{model.year}}
             </span>
-            <p><a href="#">Download</a></p>
+            <p><a href="{{model.pageUrl}}" target="_blank">Download</a></p>
           </div>
         </div>
       </div>

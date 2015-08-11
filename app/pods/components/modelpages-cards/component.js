@@ -3,10 +3,11 @@ import Ember from 'ember';
 var Model = Ember.Object.extend({
   authKey:'',
   modelpage: undefined,
+  year: Ember.computed.alias('modelpage.catalog.year'),
 
   pageUrl: function(){
     return '/pages/'+this.get('modelpage.catalog.storageid')+'/'+this.get('modelpage.page')+'.png?authKey='+this.get('authKey');
-  }.property('modelpage')
+  }.property('modelpage.catalog')
 });
 
 var Component = Ember.Component.extend({

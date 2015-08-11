@@ -4,17 +4,14 @@
       <div class="col s12 m12 l6">
         <div {{bind-attr class=":card model.processed:disabled"}}>
           <div class="card-image">
-            {{light-box href=model.pageUrl
-              data-lightbox="lightbox-pages"
-              data-title=model.year
-              classNames="thumbnail"}}
+          <img src="{{model.pageUrl}}" title="{{unbound model.catalog.year}}"/>
           </div>
           <div class="card-content">
             <span class="card-title grey-text text-darken-4">
             {{#if model.processed}}
-              {{model.catalog.year}}
+              {{unbound model.catalog.year}}
             {{else}}
-              <a href="#" {{action 'addSugestionAsPage' model}}><i class="mdi-social-whatshot">Add</i></a> {{model.catalog.year}}
+              <a href="#" {{action 'addSugestionAsPage' model}}><i class="mdi-social-whatshot">Add</i></a> {{unbound model.catalog.year}}
             {{/if}}
             </span>
             <p><a href="#">Download</a></p>
