@@ -1,6 +1,10 @@
 /* global require, module */
-
 var EmberApp = require('ember-cli/lib/broccoli/ember-app');
+
+var env = EmberApp.env();
+console.log('!!!!!!!!!!!!!!!!');
+console.log(env);
+
 
 var app = new EmberApp({
   fingerprint: {

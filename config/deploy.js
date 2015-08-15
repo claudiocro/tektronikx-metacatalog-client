@@ -12,5 +12,14 @@ module.exports = {
       prefix: 'webapp'
     },
     tagging: 'package'
+  },
+
+  docker: {
+    buildEnv: 'docker',
+    //boot2docker ssh -L 6379:localhost:6379
+    store: {
+      host: 'localhost',
+      port: 6379
+    }
   }
 };
