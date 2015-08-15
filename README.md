@@ -1,4 +1,4 @@
-# Tektroniks Metacatalog Client [![Build Status](https://travis-ci.org/claudiocro/tektronix-metacatalog-client.svg?branch=develop)](https://travis-ci.org/claudiocro/tektronix-metacatalog-client)
+# Tektronix Metacatalog Client [![Build Status](https://travis-ci.org/claudiocro/tektronix-metacatalog-client.svg?branch=develop)](https://travis-ci.org/claudiocro/tektronix-metacatalog-client)
 
 Tektronix Metacatalog Client
 
