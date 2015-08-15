@@ -33,12 +33,19 @@ Make shure your local server is running
 * `ember test`
 * `ember test --server`
 
+### Running Tests on Travis-CI
+
+This project uses [semantic-release](https://github.com/semantic-release/semantic-release/) and * [ember-deploy](http://ember-cli.github.io/ember-cli-deploy/) (index to redis and assets to amazon s3) for release and deploy.
+
+To release on your own npm account and deploy to your own heroku account:
+* Add `GH_TOKEN` and `NPM_TOKEN` to travis env. And replace the `env` section in `.travis` file with your own `REDIS_PW`, `AWS_KEY` and `AWS_ACCESS_KEY` for the ember-deploy addon.
+
 ### Building
 
 * `ember build` (development)
 * `ember build --environment production` (production)
 
-### Deploying
+### Activate deployed version
 
 * `ember deploy:activate --revision tektronix-metacatalog-client:<revision> --environment=production` (production)
 
@@ -51,4 +58,5 @@ This app follows the `semantc-release`
 
 * [ember.js](http://emberjs.com/)
 * [ember-cli](http://www.ember-cli.com/)
+* [ember-deploy](http://ember-cli.github.io/ember-cli-deploy/)
 * [semantic-release](https://github.com/semantic-release/semantic-release/)
