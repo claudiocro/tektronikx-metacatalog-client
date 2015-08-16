@@ -3,7 +3,9 @@
     <div class="page-header">
       <h2>
         {{model.model}}
-        {{modelhit-nav}}
+        {{#if session.user.isAdmin}}
+          {{modelhit-nav}}
+        {{/if}}
         <ul class="right hide-on-med-and-down">
           <li>{{#link-to 'modelhit.suggestions'}}<i class="material-icons">view_module</i>{{/link-to}}</li>
         </ul>

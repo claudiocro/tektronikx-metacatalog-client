@@ -11,6 +11,12 @@ export default DS.Model.extend({
   tagline: DS.attr('string'),
   email: DS.attr('string'),
   website: DS.attr('string'),
+  admin: DS.attr('boolean'),
+  userType: DS.attr('number'),
+
+  isAdmin: computed('userType', function(){
+    return this.get('userType') === 3;
+  }),
 
   // computed
   fullName: computed('firstName', 'lastName', function () {

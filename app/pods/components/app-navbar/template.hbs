@@ -3,8 +3,10 @@
   {{#if session.isAuthenticated}}
     {{#md-btn-dropdown text='Admin' buttonClass="dropdown-button hide-on-med-and-down" belowOrigin="true" constrainWidth="false"}}
       <li>{{#link-to 'catalogs'}}Catalogs{{/link-to}}</li>
+      {{#if session.user.isAdmin}}
       <li>{{#link-to 'modelhits.new'}}New modelhit{{/link-to}}</li>
       <li>{{#link-to 'catalogs.new'}}New catalog{{/link-to}}</li>
+      {{/if}}
     {{/md-btn-dropdown}}
 
     {{#md-btn-dropdown text=session.user.firstName buttonClass='dropdown-button hide-on-med-and-down' belowOrigin='true' constrainWidth='false'}}
@@ -12,8 +14,10 @@
     {{/md-btn-dropdown}}
 
     <li class="hide-on-large-only">{{#link-to 'catalogs'}}Catalogs{{/link-to}}</li>
+    {{#if session.user.isAdmin}}
     <li class="hide-on-large-only">{{#link-to 'modelhits.new'}}New modelhit{{/link-to}}</li>
     <li class="hide-on-large-only">{{#link-to 'catalogs.new'}}New catalogs{{/link-to}}</li>
+    {{/if}}
     <li class="divider hide-on-large-only"></li>
     <li class="hide-on-large-only"><a href="#" {{ action 'invalidateSession' }}>Signout</a></li>
 
