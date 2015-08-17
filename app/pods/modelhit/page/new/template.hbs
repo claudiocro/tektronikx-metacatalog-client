@@ -1,0 +1,30 @@
+<section>
+  <div class="container">
+    <div>
+      <div class="page-header">
+        <h2>Edit Modelpagea</h2>
+      </div>
+    </div>
+    <div class="row">
+      {{log model.model}}
+    </div>
+    <div class="row">
+      <form name="modelpageForm" class="col s12" role="form">
+        <div class="row">
+          <div class="col s6">
+          {{md-select content=model.catalogs
+            value=model.model.catalog
+            label="Catalog"
+            prompt="Please choose..."
+            optionLabelPath="content.name"
+            optionValuePath="content"}}
+          </div>
+
+          <div class="col s6">
+            {{md-input value=model.page label="Page"}}
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

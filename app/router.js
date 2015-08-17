@@ -24,6 +24,9 @@ export default Router.map(function() {
   this.resource('modelhit', { path: '/modelhit/:modelhit_id' }, function() {
     this.route('edit');
     this.route('suggestions');
+
+    this.resource('modelhit.page.edit', { path: '/modelhit/:modelhit_id/page/:modelpage_id/edit' });
+    this.resource('modelhit.page.new', { path: '/modelhit/:modelhit_id/page/new' });
   });
 
   this.resource('catalogs', { path: '/catalogs' }, function(){

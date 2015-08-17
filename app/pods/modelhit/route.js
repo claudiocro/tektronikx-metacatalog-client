@@ -7,6 +7,10 @@ export default Ember.Route.extend(AuthenticatedRouteMixin, {
   },
 
   actions: {
+    newModelpage(model) {
+      var self = this;
+      this.transitionTo('modelhit.page.new', this.modelFor('modelhit'));
+    },
     cancel() {
       this.transitionTo('index');
     },
