@@ -4,6 +4,8 @@ import { make, makeList } from 'ember-data-factory-guy';
 import TestHelper from 'ember-data-factory-guy/factory-guy-test-helper';
 import startApp from 'tektronix-metacatalog-client/tests/helpers/start-app';
 
+import IndexPage from 'tektronix-metacatalog-client/tests/acceptance/pages/index';
+import ModelhitsSearchPage from 'tektronix-metacatalog-client/tests/acceptance/pages/modelhits-search';
 
 var application;
 
@@ -25,11 +27,11 @@ test('visiting / and search', function(assert) {
   TestHelper.handleFindQuery('modelhit', ['model'], modelhits);
   authenticateSession();
 
-  visit('/');
+  IndexPage.visit();
 
   andThen(function() {
-    fillIn('nav input', 'a');
-    keyEvent('input', 'keypress', 13);
+    IndexPage.fillInSearch('a');
+    IndexPage.doSearch();
   });
 
   andThen(function() {
@@ -44,11 +46,11 @@ test('visiting /modelhits/search/a', function(assert) {
   TestHelper.handleFindQuery('modelhit', ['model'], modelhits);
   authenticateSession();
 
-  visit('/modelhits/search/a');
+  ModelhitsSearchPage.visitByTerm('a');
 
   andThen(function() {
-    assert.equal(find('table tbody tr').length, 2);
-    click('table tbody tr:first-child a');
+    assert.equal(ModelhitsSearchPage.listLength(), 2);
+    ModelhitsSearchPage.clickFirstItemInList();
   });
 
   andThen(function() {

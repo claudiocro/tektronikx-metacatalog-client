@@ -13,16 +13,25 @@
         <div class="row">
           <div class="col s6">
           {{md-select content=model.catalogs
-            value=model.model.catalog
+            value=selectedObject
             label="Catalog"
             prompt="Please choose..."
-            optionLabelPath="content.name"
+            optionLabelPath="content.displayName"
             optionValuePath="content"}}
           </div>
 
           <div class="col s6">
-            {{md-input value=model.page label="Page"}}
+            {{md-input value=model.model.page label="Page"}}
           </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <button {{action 'update' model.model}} class="btn">Save</button>
+          </div>
+        </div>
+
+        <div class="text-center text-danger">
+          <strong>{{serverErrorMessage}}</strong>
         </div>
       </form>
     </div>

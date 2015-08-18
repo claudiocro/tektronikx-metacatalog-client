@@ -4,6 +4,7 @@ import { make, makeList } from 'ember-data-factory-guy';
 import TestHelper from 'ember-data-factory-guy/factory-guy-test-helper';
 import startApp from 'tektronix-metacatalog-client/tests/helpers/start-app';
 
+import CatalogsPage from 'tektronix-metacatalog-client/tests/acceptance/pages/catalogs';
 
 var application;
 
@@ -23,10 +24,10 @@ test('visiting /catalogs', function(assert) {
   TestHelper.handleFindAll('catalog', 10);
   authenticateSession();
 
-  visit('/catalogs');
+  CatalogsPage.visit();
   andThen(function() {
-    assert.equal(find('table tbody tr').length, 10);
-    click('table tbody tr:first-child a');
+    assert.equal(CatalogsPage.listLength(), 10);
+    CatalogsPage.clickFirstItemInList();
   });
 
   andThen(function() {

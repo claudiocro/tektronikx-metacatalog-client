@@ -1,6 +1,6 @@
-{{#md-btn-dropdown buttonClass="dropdown-button" constrainWidth="false"}}
+{{#md-btn-dropdown buttonClass="dropdown-button menu-modelhit" constrainWidth="false"}}
   <li>{{#link-to 'modelhit.edit'}}Edit{{/link-to}}</li>
   <li><a {{action 'delete' model}}>Delete</a></li>
   <li>{{#link-to 'modelhits.new'}}New modelhit{{/link-to}}</li>
-  <li><a {{action 'newModelpage' model}}>New page</a></li>
+  <li class="action-new-modelpage"><a {{action 'newModelpage' model}}>New page</a></li>
 {{/md-btn-dropdown}}
