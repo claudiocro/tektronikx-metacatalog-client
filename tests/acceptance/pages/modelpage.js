@@ -3,6 +3,6 @@ export default {
     return visit('/modelhit/'+modelhitid+'/page/new');
   },
   catalogsSelectLength() {
-    return find('.select-wrapper select option').length;
+    return find('select option').length;
   }
 };

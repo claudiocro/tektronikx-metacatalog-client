@@ -1,6 +1,6 @@
 {{#each row in grid}}
   <div class="row">
-    {{#each model in row}}
+    {{#each rm in row}}
       <div class="col s12 m12 l6">
         <div class="card">
           <div class="card-image">
@@ -8,9 +8,9 @@
           </div>
           <div class="card-content">
             <span class="card-title grey-text text-darken-4">
-              {{model.year}}
+              {{rm.year}} / {{rm.modelpage.page}}
             </span>
-            <p><a href="{{model.pageUrl}}" target="_blank">Download</a></p>
+            <p>{{#link-to 'modelhit.page.edit' rm.modelpage.model rm.modelpage}}Edit{{/link-to}}<a href="{{rm.pageUrl}}" target="_blank">Download</a></p>
           </div>
         </div>
       </div>

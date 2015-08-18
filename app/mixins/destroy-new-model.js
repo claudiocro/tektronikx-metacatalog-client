@@ -9,5 +9,8 @@ export default Ember.Mixin.create({
     if (model.get('isNew')) {
       model.destroyRecord();
     }
+    else  if(model.get('isDirty')) {
+      model.rollback();
+    }
   })
 });

@@ -1,0 +1,27 @@
+<form class="col s12 modelpage-form" role="form">
+  <div class="row">
+    <div class="col s6">
+      {{model.catalog.year}} / {{selectedObject.year}}
+      <label class="active">Catalog</label>
+      {{view "select" content=controller.catalogs
+        value=selectedObject
+        label="Catalog"
+        prompt="Please choose..."
+        optionLabelPath="content.displayName"
+        optionValuePath="content"}}
+    </div>
+
+    <div class="col s6">
+      {{md-input value=model.page label="Page"}}
+    </div>
+  </div>
+  <div class="row">
+    <div class="input-field col s12">
+      <button {{action 'update'}} class="btn">Save</button> or <a href="#" {{action 'cancel'}}>Cancel</a>
+    </div>
+  </div>
+
+  <div class="text-center text-danger">
+    <strong>{{serverErrorMessage}}</strong>
+  </div>
+</form>
