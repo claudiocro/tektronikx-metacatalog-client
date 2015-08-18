@@ -1,8 +1,15 @@
 import Ember from 'ember';
 
+const {computed,observer} = Ember;
+
 export default Ember.Controller.extend({
+  catalogs: [],
   selectedObject: null,
-  objectSelected: function() {
-    this.set('model.model.catalog', this.get('selectedObject'))
-  }.observes("selectedObject")
+  objectSelected: observer('selectedObject', function() {
+    this.set('model.catalog', this.get('selectedObject'));
+  }),
+  clearSelected: observer('model', function() {
+    this.set('selectedObject', null);
+  }),
+  catalogsLoaded: computed.notEmpty('catalogs')
 });
