@@ -2,11 +2,14 @@ import Ember from 'ember';
 import AuthenticatedRouteMixin from 'simple-auth/mixins/authenticated-route-mixin';
 
 export default Ember.Route.extend(AuthenticatedRouteMixin, {
-    model: function(model) {
+  model(model) {
     return this.store.find("modelhit", model.modelhit_id);
   },
 
   actions: {
+    newModelpage() {
+      this.transitionTo('modelhit.page.new', this.modelFor('modelhit'));
+    },
     cancel() {
       this.transitionTo('index');
     },

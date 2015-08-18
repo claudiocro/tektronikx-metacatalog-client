@@ -4,6 +4,7 @@ import { make, makeList } from 'ember-data-factory-guy';
 import TestHelper from 'ember-data-factory-guy/factory-guy-test-helper';
 import startApp from 'tektronix-metacatalog-client/tests/helpers/start-app';
 
+import ModelhitPage from 'tektronix-metacatalog-client/tests/acceptance/pages/modelhit';
 
 var application;
 
@@ -24,9 +25,9 @@ test('visiting /modelhit/2', function(assert) {
   var modelhit = make('modelhit', 'with_modelpages');
   authenticateSession();
 
-  visit('/modelhit/' + modelhit.id);
+  ModelhitPage.visit(modelhit.id);
 
   andThen(function() {
-    assert.equal(find('.card').length, 2);
+    assert.equal(ModelhitPage.cardsLength(), 2);
   });
 });

@@ -4,6 +4,12 @@ import Router from '../../router';
 import config from '../../config/environment';
 import initializeTestHelpers from 'simple-auth-testing/test-helpers';
 
+Ember.Test.registerHelper('promoteSessionToAdmin',
+  function(app, selector, n, context) {
+    currentSession().user = {isAdmin: true};
+  }
+);
+
 export default function startApp(attrs) {
   var application;
 

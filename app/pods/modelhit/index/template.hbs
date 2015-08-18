@@ -4,7 +4,7 @@
       <h2>
         {{model.model}}
         {{#if session.user.isAdmin}}
-          {{modelhit-nav}}
+          {{modelhit-nav newModelpage='newModelpage'}}
         {{/if}}
         <ul class="right hide-on-med-and-down">
           <li>{{#link-to 'modelhit.suggestions'}}<i class="material-icons">view_module</i>{{/link-to}}</li>
