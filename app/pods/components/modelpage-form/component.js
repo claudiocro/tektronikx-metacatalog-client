@@ -3,6 +3,7 @@ import Ember from 'ember';
 const {computed,observer} = Ember;
 
 export default Ember.Component.extend({
+  authKey: '',
   catalogs: [],
   selectedObject: null,
   _doNotSet: false, //todo: bad
@@ -24,6 +25,14 @@ export default Ember.Component.extend({
     }
   }),
   catalogsLoaded: computed.notEmpty('catalogs'),
+
+  showImage: function() {
+    return this.get('model.catalog') && this.get('model.page');
+  }.property('model.catalog', 'model.page'),
+
+  pageUrl: function() {
+    return '/pages/'+this.get('model.catalog.storageid')+'/'+this.get('model.page')+'.png?authKey='+this.get('authKey');
+  }.property('model.catalog', 'model.page'),
 
   actions: {
     update() {
