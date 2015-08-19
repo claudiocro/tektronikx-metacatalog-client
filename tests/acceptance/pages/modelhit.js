@@ -11,5 +11,11 @@ export default {
     andThen(function() {
       click('.action-new-modelpage a');
     });
+  },
+  firstCardImageSrc() {
+    return find('.tkx-modelpages-cards .card .card-image img').first().attr('src');
+  },
+  firstCardTitle() {
+    return find('.tkx-modelpages-cards .card .card-title').first().text().trim();
   }
 };

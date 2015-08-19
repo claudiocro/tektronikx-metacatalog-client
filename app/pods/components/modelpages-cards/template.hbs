@@ -4,13 +4,16 @@
       <div class="col s12 m12 l6">
         <div class="card">
           <div class="card-image">
-            <img src="{{model.pageUrl}}" title="{{model.year}}"/>
+            <img src="{{rm.pageUrl}}" title="{{rm.year}}"/>
           </div>
           <div class="card-content">
             <span class="card-title grey-text text-darken-4">
               {{rm.year}} / {{rm.modelpage.page}}
             </span>
-            <p>{{#link-to 'modelhit.page.edit' rm.modelpage.model rm.modelpage}}Edit{{/link-to}}<a href="{{rm.pageUrl}}" target="_blank">Download</a></p>
+            <p class="card-bottom-actions">
+              {{#link-to 'modelhit.page.edit' rm.modelpage.model rm.modelpage}}<i class="mdi-content-create">Edit</i>{{/link-to}} |
+              <a href="{{rm.pageUrl}}" target="_blank"><i class="mdi-content-archive">Download</i></a>
+            </p>
           </div>
         </div>
       </div>

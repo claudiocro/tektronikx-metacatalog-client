@@ -26,13 +26,18 @@ nav .input-field-search {
   color: #000000;
 }
 
+.page-header ul {
+  margin: 0;
+}
+
 .card.disabled {
   pointer-events: none;
   opacity: 0.3;
 }
 
-.page-header ul {
-  margin: 0;
+
+.card-bottom-actions a {
+    color: #000;
 }
 
 

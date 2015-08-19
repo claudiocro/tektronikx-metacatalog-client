@@ -11,6 +11,7 @@ var Model = Ember.Object.extend({
 });
 
 var Component = Ember.Component.extend({
+  classNames: ['tkx-modelpages-cards'],
   authKey: '',
   model: Ember.A(),
   gridCol: 4,
