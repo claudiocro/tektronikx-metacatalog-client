@@ -31,7 +31,7 @@ export default Ember.Component.extend({
   }.property('model.catalog', 'model.page'),
 
   pageUrl: function() {
-    return '/pages/'+this.get('model.catalog.storageid')+'/'+this.get('model.page')+'.png?authKey='+this.get('authKey');
+    return '/pages/'+this.get('model.catalog.storageid')+'/'+this.get('model.page')+'.jpg?authKey='+this.get('authKey');
   }.property('model.catalog', 'model.page'),
 
   actions: {

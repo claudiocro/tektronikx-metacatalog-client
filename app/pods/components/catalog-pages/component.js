@@ -8,7 +8,7 @@ var Model = Ember.Object.extend({
   processed: false, //todo: this has no effect at the moment
 
   pageUrl: function(){
-    return '/pages/'+this.get('catalog.storageid')+'/'+this.get('modelhit.page')+'.png?authKey='+this.get('authKey');
+    return '/pages/'+this.get('catalog.storageid')+'/'+this.get('modelhit.page')+'.jpg?authKey='+this.get('authKey');
   }.property('catalog', 'modelhit')
 });
 

@@ -6,7 +6,7 @@ var Model = Ember.Object.extend({
   year: Ember.computed.alias('modelpage.catalog.year'),
 
   pageUrl: function(){
-    return '/pages/'+this.get('modelpage.catalog.storageid')+'/'+this.get('modelpage.page')+'.png?authKey='+this.get('authKey');
+    return '/pages/'+this.get('modelpage.catalog.storageid')+'/'+this.get('modelpage.page')+'.jpg?authKey='+this.get('authKey');
   }.property('modelpage.catalog')
 });
 
