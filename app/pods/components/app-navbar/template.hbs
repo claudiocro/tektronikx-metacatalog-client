@@ -10,7 +10,7 @@
     {{/md-btn-dropdown}}
 
     {{#md-btn-dropdown text=session.user.firstName buttonClass='dropdown-button hide-on-med-and-down' belowOrigin='true' constrainWidth='false'}}
-      <li><a href="#" {{ action 'invalidateSession' }}>Signout</a></li>
+      <li><a href="#" {{ action 'logout' }}>Signout</a></li>
     {{/md-btn-dropdown}}
 
     <li class="hide-on-large-only">{{#link-to 'catalogs'}}Catalogs{{/link-to}}</li>
@@ -19,7 +19,7 @@
     <li class="hide-on-large-only">{{#link-to 'catalogs.new'}}New catalogs{{/link-to}}</li>
     {{/if}}
     <li class="divider hide-on-large-only"></li>
-    <li class="hide-on-large-only"><a href="#" {{ action 'invalidateSession' }}>Signout</a></li>
+    <li class="hide-on-large-only"><a href="#" {{ action 'logout' }}>Signout</a></li>
 
   {{else}}
     <li>{{#link-to 'register'}}Signup{{/link-to}}</li>

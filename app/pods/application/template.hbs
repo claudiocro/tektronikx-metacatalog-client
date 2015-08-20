@@ -1,7 +1,6 @@
-{{app-navbar}}
+{{app-navbar logout="logout"}}
 {{#if session.isAuthenticated}}
   {{search-input doSearch='doSearch' searchValue=searchValue currentRouteName=currentRouteName showOnRoute='index'}}
 {{/if}}
 {{outlet}}
 {{md-modal-container}}
-
