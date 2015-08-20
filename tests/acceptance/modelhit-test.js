@@ -30,7 +30,7 @@ test('visiting /modelhit/2', function(assert) {
   andThen(function() {
     assert.equal(ModelhitPage.cardsLength(), 2);
 
-    assert.equal(ModelhitPage.firstCardImageSrc(), '/pages/std-1962-1/2.png?authKey=undefined');
+    assert.equal(ModelhitPage.firstCardImageSrc(), '/pages/std-1962-1/2.jpg?authKey=undefined');
     assert.equal(ModelhitPage.firstCardTitle(), '1962 / 2');
   });
 
